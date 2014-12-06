@@ -1,0 +1,12 @@
+
+    li {
+        list-style-type: none;
+       text-align: center;
+        padding: 1%;
+        font-size: 200%;
+
+    }
+
+    .ui-li-static{
+        text-align: center !important;
+    }
