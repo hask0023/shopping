@@ -3,27 +3,25 @@ var myList = [];
 
 
 document.addEventListener("DOMContentLoaded", function(ev){
+//document.addEventListener("deviceready", function(ev){
   //this runs when the page loads
-   localStorage.clear();
+// localStorage.clear();
 
 
   if(localStorage.getItem("grocery-hask0023")){
     myList = JSON.parse(localStorage.getItem("grocery-hask0023"));
-
-    //convert from String to Array
   }
-
   showList();
-
   document.querySelector("#btnAdd").addEventListener("click", function(ev){
     ev.preventDefault();
     var newItem = document.querySelector("#item").value;
+    if (newItem != ""){
     myList.push( newItem );
     localStorage.setItem("grocery-hask0023", JSON.stringify(myList) );
     document.querySelector("#item").value= '';
-    //convert from Array to String.
     showList();
     return false;
+    }
   });
 
 
@@ -81,11 +79,10 @@ function showList(){
     output.appendChild(p);
 
       $ ("li").one("swiperight", doneItem);
+       $ ("li").one("swipeleft", doneItem);
+      $ ("li").on("taphold", removeItem);
+      $ ("strike").on("taphold", removeItem);
 
-//      $ ("p").dblclick(removeItem);
-//      $ ("strike").dblclick(removeItem);
-      $ ("li").on("swipeleft", removeItem);
-      $ ("strike").on("swipeleft", removeItem);
    // p.addEventListener("click", removeItem);
 
   }
