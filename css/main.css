@@ -1,12 +1,33 @@
 
-    li {
-        list-style-type: none;
-       text-align: center;
-        padding: 1%;
-        font-size: 200%;
+ *{
+    font-size: 100%;
+  }
 
-    }
 
     .ui-li-static{
         text-align: center !important;
     }
+
+h1 {
+    font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif !important;
+    font-size: 3rem;
+}
+
+#daWrap {
+    position: absolute;
+    bottom: 6%;
+    width: 50px;
+    left: 86%;
+}
+/*
+.input {
+    width: 50% !important;
+}
+*/
+
+.ui-input-text {
+    width: 85% !important;
+
+
+}
+
